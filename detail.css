@@ -1,0 +1,357 @@
+html,
+body {
+  width: 100vw;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  font-family: "Nunito", sans-serif;
+}
+
+nav a {
+  text-decoration: none;
+  color: #b8becd;
+}
+
+nav a.icon-home {
+  font-size: 0px;
+}
+
+nav a.icon-home:hover {
+  font-size: 0px;
+  opacity: 0.7;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+nav a.active {
+  color: #000;
+}
+
+nav ul .email {
+  position: relative;
+  top: -5px;
+}
+
+.prof {
+  position: relative;
+  top: -10px;
+  margin-right: -20px;
+}
+
+.icon-email {
+  content: url("./assets/email.png");
+  height: 2rem;
+}
+
+.icon-profile {
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+h1 {
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 400;
+}
+
+.main-photo {
+  width: 90%;
+}
+
+img {
+  border-radius: 10px;
+}
+
+.small-photo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.availability {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #087e0d;
+}
+
+.payment {
+  font-weight: 300;
+  font-size: 1.5rem;
+  color: #9b0a0a;
+}
+
+.price {
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 700;
+  font-size: 2.25rem;
+  text-align: end;
+}
+
+.count {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-weight: 900;
+  font-size: 3rem;
+}
+
+button.count-button {
+  width: 5rem;
+  font-weight: 900;
+  font-size: 3rem;
+  border-radius: 10px;
+}
+
+.action {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  height: 90px;
+  font-weight: 700;
+  font-size: 1.5rem;
+  border-radius: 10px;
+}
+
+.button2 {
+  width: 35%;
+}
+
+.button1 {
+  width: 20%;
+}
+
+.icon-like {
+  content: url("./assets/like.png");
+  height: 1.25rem;
+}
+
+/* Footer */
+footer {
+  background-color: #f9f9fb;
+  color: #393939;
+}
+
+.grid-footer {
+  display: grid;
+  padding: 70px 90px 0px;
+  font-family: "Mulish", sans-serif;
+  font-weight: 300;
+  color: #393939;
+}
+
+.grid-footer .footer-title {
+  font-weight: 700;
+  color: #393939;
+  margin-bottom: 1em;
+}
+
+.grid-footer a {
+  text-decoration: none;
+  color: #393939;
+}
+
+.grid-footer a:hover {
+  color: #393939;
+  opacity: 0.7;
+}
+
+.logo {
+  content: url("./assets/logo.svg");
+  height: 45px;
+}
+
+hr.line {
+  color: #c4c4c4;
+  width: 85%;
+  margin: 10px auto;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0px 25px;
+}
+
+.social a {
+  font-size: 0px;
+  color: #393939;
+}
+
+.icon-google {
+  content: url("./assets/icon-google.png");
+  height: 1em;
+}
+
+.icon {
+  margin: 15px;
+}
+
+.icon:hover {
+  opacity: 0.7;
+}
+.icon-twitter {
+  content: url("./assets/icon-twitter.svg");
+}
+.icon-facebook {
+  content: url("./assets/icon-facebook.svg");
+}
+.icon-instagram {
+  content: url("./assets/icon-instagram.svg");
+}
+.icon-linkedin {
+  content: url("./assets/icon-linkedin.svg");
+}
+.icon-youtube {
+  content: url("./assets/icon-youtube.svg");
+}
+/* Footer */
+
+@media (max-width: 600px) {
+  nav {
+    padding: 1.5rem 2rem 0px;
+    width: 100vw;
+    height: 10vh;
+  }
+
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: -50px;
+  }
+
+  nav ul li {
+    float: right;
+    padding: 1rem;
+  }
+
+  nav li.optional {
+    display: none;
+  }
+
+  .content {
+    padding: 1.5rem 2rem;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .grid-footer {
+    grid-template-columns: auto;
+  }
+
+  .destinations,
+  .vehicles,
+  .interests {
+    display: none;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+  nav {
+    padding: 5rem 6rem 0px;
+    width: 100vw;
+    height: 20vh;
+  }
+
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: -50px;
+  }
+
+  nav ul li {
+    float: right;
+    padding: 1rem;
+  }
+
+  nav li.optional {
+    display: none;
+  }
+
+  .content {
+    padding: 5rem 6rem;
+  }
+
+  h1 {
+    font-size: 4em;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  .page {
+    font-weight: 700;
+    font-size: 2.25rem;
+  }
+
+  .grid-footer {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media (min-width: 768px) {
+  nav {
+    padding: 5rem 6rem 0px;
+    width: 100vw;
+    height: 20vh;
+  }
+
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: -50px;
+  }
+
+  nav ul li {
+    float: right;
+    padding: 1rem;
+  }
+
+  .content {
+    padding: 5rem 6rem;
+  }
+
+  .vehicle {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+  h1 {
+    font-size: 4em;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  .page {
+    font-weight: 700;
+    font-size: 2.25rem;
+  }
+
+  .grid-footer {
+    grid-template-columns: auto auto auto auto;
+  }
+}

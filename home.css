@@ -1,0 +1,505 @@
+html,
+body {
+  width: 100vw;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  font-family: "Nunito", sans-serif;
+}
+
+nav a {
+  text-decoration: none;
+  color: #b8becd;
+}
+
+nav a.icon-home {
+  font-size: 0px;
+}
+
+nav a.icon-home:hover {
+  font-size: 0px;
+  opacity: 0.7;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+nav a.active {
+  color: #000;
+}
+
+.finder {
+  background-image: linear-gradient(#0000004d 100%, #fff 0%),
+    url("./assets/explore.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fff;
+  font-weight: 900;
+}
+
+h1,
+h2 {
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 700;
+}
+
+.finder-line {
+  color: #fff;
+  width: 2rem;
+}
+
+.form .input-form {
+  font-weight: 700;
+}
+
+.finder button {
+  color: #000;
+  font-weight: 900;
+}
+
+.popular {
+  font-family: "Nunito", sans-serif;
+}
+
+[class^="popular-card"] {
+  border-radius: 10px;
+}
+
+.popular-card1 {
+  background-image: url("./assets/van-forest.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+.popular-card2 {
+  background-image: url("./assets/ride-extreme.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+.popular-card3 {
+  background-image: url("./assets/jeep-bromo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+.popular-card4 {
+  background-image: url("./assets/ride-town.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+.popular-card-text {
+  width: 120px;
+  height: 50px;
+  border-radius: 0px 5px 0px 0px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0px;
+}
+
+.popular-card-title {
+  font-weight: 600;
+}
+
+.popular-card-location {
+  font-weight: 400;
+}
+
+.testimony-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.testimony-comment {
+  font-family: 'Mulish', sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.testimony-user {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.testimony-user-job {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.testimony-photo {
+  background-image: url('./assets/josh.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  border-radius: 15px;
+}
+
+.testimony-button {
+  width: 100px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 5px 0px 0px 0px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
+.icon-previous {
+  content: url('./assets/previous.png');
+}
+.icon-next {
+  content: url('./assets/next.png');
+}
+
+/* Footer */
+footer {
+  background-color: #f9f9fb;
+  color: #393939;
+}
+
+.grid-footer {
+  display: grid;
+  padding: 70px 90px 0px;
+  font-family: "Mulish", sans-serif;
+  font-weight: 300;
+  color: #393939;
+}
+
+.grid-footer .footer-title {
+  font-weight: 700;
+  color: #393939;
+  margin-bottom: 1em;
+}
+
+.grid-footer a {
+  text-decoration: none;
+  color: #393939;
+}
+
+.grid-footer a:hover {
+  color: #393939;
+  opacity: 0.7;
+}
+
+.logo {
+  content: url("./assets/logo.svg");
+  height: 45px;
+}
+
+hr.line {
+  color: #c4c4c4;
+  width: 85%;
+  margin: 10px auto;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0px 25px;
+}
+
+.social a {
+  font-size: 0px;
+  color: #393939;
+}
+
+.icon-google {
+  content: url("./assets/icon-google.png");
+  height: 1em;
+}
+
+.icon {
+  margin: 15px;
+}
+
+.icon:hover {
+  opacity: 0.7;
+}
+.icon-twitter {
+  content: url("./assets/icon-twitter.svg");
+}
+.icon-facebook {
+  content: url("./assets/icon-facebook.svg");
+}
+.icon-instagram {
+  content: url("./assets/icon-instagram.svg");
+}
+.icon-linkedin {
+  content: url("./assets/icon-linkedin.svg");
+}
+.icon-youtube {
+  content: url("./assets/icon-youtube.svg");
+}
+/* Footer */
+
+@media (max-width: 600px) {
+  nav {
+    padding: 1.5rem 2rem 0px;
+    width: 100vw;
+    height: 10vh;
+  }
+
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: -50px;
+  }
+
+  nav ul .logreg {
+    position: relative;
+    top: -8px;
+    color: #000;
+  }
+
+  .login {
+    margin-right: -20px;
+  }
+
+  nav ul li {
+    float: right;
+    padding: 1rem;
+  }
+
+  nav li.optional {
+    display: none;
+  }
+
+  .finder {
+    height: 40vh;
+    padding: 1.5rem 2rem 0px;
+  }
+
+  h1 {
+    font-size: 2em;
+    margin-bottom: 1.5rem;
+  }
+
+  .form .input-form {
+    background-color: #ffffff40;
+    border: 0px;
+    color: #fff;
+    border-radius: 5px;
+  }
+
+  .content {
+    padding: 1.5rem 2rem 0px;
+  }
+
+  .popular {
+    display: grid;
+    grid-template-columns: 280px;
+    grid-template-rows: repeat(4, 340px);
+    grid-row-gap: 20px;
+    align-content: space-around;
+    justify-content: space-between;
+  }
+  
+  .testimony-card1 {
+    display: grid;
+    grid-template-columns: 380px;
+    grid-template-rows: repeat(2, 500px);
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .grid-footer {
+    grid-template-columns: auto;
+  }
+
+  .destinations,
+  .vehicles,
+  .interests {
+    display: none;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+  nav {
+    padding: 5rem 6rem 0px;
+    width: 100vw;
+    height: 20vh;
+  }
+
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: -50px;
+  }
+
+  nav ul .logreg {
+    position: relative;
+    top: -8px;
+    color: #000;
+  }
+
+  .login {
+    margin-right: -20px;
+  }
+
+  nav ul li {
+    float: right;
+    padding: 1rem;
+  }
+
+  nav li.optional {
+    display: none;
+  }
+
+  .finder {
+    height: 80vh;
+    padding: 5rem 6rem 0px;
+  }
+
+  h1 {
+    font-size: 4em;
+    margin-bottom: 5rem;
+  }
+
+  .form {
+    display: grid;
+    grid-template-columns: 15rem 15rem;
+    grid-template-rows: 3rem 3rem 3rem;
+    grid-gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .form .input-form {
+    background-color: #ffffff40;
+    border: 0px;
+    color: #fff;
+    border-radius: 5px;
+  }
+
+  .content {
+    padding: 5rem 6rem 0px;
+  }
+
+  .popular {
+    display: grid;
+    grid-template-columns: repeat(2, 280px);
+    grid-template-rows: repeat(2, 340px);
+    grid-row-gap: 20px;
+    align-content: space-around;
+    justify-content: space-between;
+  }
+  
+  .testimony-card1 {
+    display: grid;
+    grid-template-columns: 380px;
+    grid-template-rows: repeat(2, 500px);
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .grid-footer {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media (min-width: 768px) {
+  nav {
+    padding: 5rem 6rem 0px;
+    width: 100vw;
+    height: 20vh;
+  }
+
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: -50px;
+  }
+
+  nav ul .logreg {
+    position: relative;
+    top: -8px;
+    color: #000;
+  }
+
+  .login {
+    margin-right: -20px;
+  }
+
+  nav ul li {
+    float: right;
+    padding: 1rem;
+  }
+
+  .finder {
+    height: 80vh;
+    padding: 5rem 6rem 0px;
+  }
+
+  h1 {
+    font-size: 4em;
+    margin-bottom: 5rem;
+  }
+
+  .form {
+    display: grid;
+    grid-template-columns: 15rem 15rem;
+    grid-template-rows: 3rem 3rem 3rem;
+    grid-gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .form .input-form {
+    background-color: #ffffff40;
+    border: 0px;
+    color: #fff;
+    border-radius: 5px;
+  }
+
+  .content {
+    padding: 5rem 6rem 0px;
+  }
+
+  .popular {
+    display: grid;
+    grid-template-columns: 280px 280px 280px 280px;
+    grid-template-rows: 340px;
+    align-content: space-around;
+    justify-content: space-between;
+  }
+  
+  .testimony-card1 {
+    display: grid;
+    grid-template-columns: 500px 380px;
+    grid-template-rows: 500px;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .grid-footer {
+    grid-template-columns: auto auto auto auto;
+  }
+}
