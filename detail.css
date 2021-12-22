@@ -255,12 +255,6 @@ hr.line {
   .grid-footer {
     grid-template-columns: auto;
   }
-
-  .destinations,
-  .vehicles,
-  .interests {
-    display: none;
-  }
 }
 
 @media (min-width: 600px) and (max-width: 768px) {
