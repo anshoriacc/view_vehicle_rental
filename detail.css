@@ -253,7 +253,7 @@ hr.line {
   }
 
   .grid-footer {
-    grid-template-columns: 100vw;
+    grid-template-columns: auto;
   }
 }
 
