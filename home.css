@@ -83,6 +83,12 @@ h2 {
 .finder-line {
   color: #fff;
   width: 2rem;
+  margin: 0;
+  margin-bottom: 3rem;
+}
+
+.finder-line:not([size]) {
+  height: 2px;
 }
 
 .finder button {
@@ -92,10 +98,9 @@ h2 {
 
 .form {
   display: grid;
-  grid-template-columns: 15rem 15rem;
-  grid-template-rows: 3rem 3rem 3rem;
+  grid-template-columns: 100%;
+  grid-template-rows: 3rem 3rem 3rem 3rem 3rem;
   grid-gap: 1rem;
-  margin-bottom: 1rem;
 }
 
 .form .input-form {
@@ -112,6 +117,10 @@ h2 {
 
 ::-webkit-calendar-picker-indicator {
   filter: invert(1);
+}
+
+.explore {
+  width: 50%;
 }
 
 /* Footer */
@@ -211,6 +220,30 @@ hr.line {
 /* Footer */
 
 @media (min-width: 576px) {
+  .finder-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* .form {
+    display: grid;
+    grid-template-columns: calc(calc(100vw - 10vmax - 1rem) / 2) calc(
+        calc(100vw - 10vmax - 1rem) / 2
+      );
+    grid-template-rows: 3rem 3rem 3rem;
+  } */
+
+  .form {
+    display: grid;
+    grid-template-columns: 15rem 15rem;
+    grid-template-rows: 3rem 3rem 3rem;
+  }
+
+  button.explore {
+    width: 100%;
+  }
+
   .grid-footer {
     grid-template-areas:
       "a a a"
@@ -247,10 +280,9 @@ hr.line {
     height: calc(100vh - 45px - 4vmax);
   }
 
-  .finder-content {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+  h1 {
+    font-size: 4rem;
+    margin-bottom: 4rem;
   }
 
   .grid-footer {
