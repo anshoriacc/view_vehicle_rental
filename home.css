@@ -3,7 +3,7 @@ body {
   width: 100vw;
   margin: 0px;
   padding: 0px;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   font-family: "Nunito", sans-serif;
 }
 
@@ -17,9 +17,6 @@ footer,
 
 header {
   background-color: #fff;
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0px;
 }
 
 .icon-home,
