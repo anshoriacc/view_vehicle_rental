@@ -7,29 +7,57 @@ body {
   font-family: "Nunito", sans-serif;
 }
 
-nav a {
-  text-decoration: none;
-  color: #b8becd;
+header,
+footer {
+  padding: 2vmax 5vmax 0;
 }
 
-nav a.icon-home {
-  font-size: 0px;
+.icon-home {
+  font-size: 0;
 }
 
-nav a.icon-home:hover {
-  font-size: 0px;
+.icon-home:hover {
   opacity: 0.7;
 }
 
-nav a:hover {
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 400;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+}
+
+nav a {
+  padding: 10px;
+  color: #b8becd;
+  text-decoration: none;
+}
+
+nav a.active,
+a:hover,
+button.button-logreg {
   color: #000;
 }
 
-nav a.active {
-  color: #000;
+.nav-item {
+  display: none;
 }
 
-.finder {
+.logo {
+  content: url("./assets/logo.svg");
+  height: 45px;
+}
+
+.finder-container {
+  height: 40vw;
   background-image: linear-gradient(#0000004d 100%, #fff 0%),
     url("./assets/explore.jpg");
   background-size: cover;
@@ -39,150 +67,40 @@ nav a.active {
   font-weight: 900;
 }
 
-h1,
-h2 {
-  font-family: "Playfair Display", sans-serif;
-  font-weight: 700;
-}
-
-.finder-line {
-  color: #fff;
-  width: 2rem;
-}
-
-.form .input-form {
-  font-weight: 700;
-}
-
-.finder button {
-  color: #000;
-  font-weight: 900;
-}
-
-.popular {
-  font-family: "Nunito", sans-serif;
-}
-
-[class^="popular-card"] {
-  border-radius: 10px;
-}
-
-.popular-card1 {
-  background-image: url("./assets/van-forest.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  position: relative;
-}
-
-.popular-card2 {
-  background-image: url("./assets/ride-extreme.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  position: relative;
-}
-
-.popular-card3 {
-  background-image: url("./assets/jeep-bromo.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  position: relative;
-}
-
-.popular-card4 {
-  background-image: url("./assets/ride-town.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  position: relative;
-}
-
-.popular-card-text {
-  width: 120px;
-  height: 50px;
-  border-radius: 0px 5px 0px 0px;
-  background-color: #fff;
-  position: absolute;
-  bottom: 0px;
-}
-
-.popular-card-title {
-  font-weight: 600;
-}
-
-.popular-card-location {
-  font-weight: 400;
-}
-
-.testimony-detail {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.testimony-comment {
-  font-family: 'Mulish', sans-serif;
-  font-weight: 400;
-  font-size: 1.5rem;
-}
-
-.testimony-user {
-  font-family: 'Nunito', sans-serif;
-  font-weight: 700;
-  font-size: 1.5rem;
-}
-
-.testimony-user-job {
-  font-family: 'Nunito', sans-serif;
-  font-weight: 400;
-  font-size: 1.5rem;
-}
-
-.testimony-photo {
-  background-image: url('./assets/josh.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  position: relative;
-  border-radius: 15px;
-}
-
-.testimony-button {
-  width: 100px;
-  height: 50px;
-  background-color: #fff;
-  border-radius: 5px 0px 0px 0px;
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
-}
-
-.icon-previous {
-  content: url('./assets/previous.png');
-}
-.icon-next {
-  content: url('./assets/next.png');
-}
-
 /* Footer */
 footer {
   background-color: #f9f9fb;
   color: #393939;
+  font-family: "Mulish", sans-serif;
+  font-weight: 300;
 }
 
 .grid-footer {
   display: grid;
-  padding: 70px 90px 0px;
-  font-family: "Mulish", sans-serif;
-  font-weight: 300;
-  color: #393939;
+  grid-template-areas:
+    "a a a"
+    "b c d";
+  grid-gap: 1rem;
+}
+
+.grid-footer .intro {
+  grid-area: a;
+}
+
+.grid-footer .destinations {
+  grid-area: b;
+}
+
+.grid-footer .vehicles {
+  grid-area: c;
+}
+
+.grid-footer .interests {
+  grid-area: d;
 }
 
 .grid-footer .footer-title {
   font-weight: 700;
-  color: #393939;
   margin-bottom: 1em;
 }
 
@@ -204,13 +122,14 @@ footer {
 hr.line {
   color: #c4c4c4;
   width: 85%;
-  margin: 10px auto;
+  margin: 0 auto;
 }
 
 .social {
+  padding: 1.5rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  padding: 20px 0px 25px;
 }
 
 .social a {
@@ -218,13 +137,8 @@ hr.line {
   color: #393939;
 }
 
-.icon-google {
-  content: url("./assets/icon-google.png");
-  height: 1em;
-}
-
 .icon {
-  margin: 15px;
+  margin: 1rem;
 }
 
 .icon:hover {
@@ -247,259 +161,44 @@ hr.line {
 }
 /* Footer */
 
-@media (max-width: 600px) {
-  nav {
-    padding: 1.5rem 2rem 0px;
-    width: 100vw;
-    height: 10vh;
-  }
-
-  nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    top: -50px;
-  }
-
-  nav ul .logreg {
-    position: relative;
-    top: -8px;
-    color: #000;
-  }
-
-  .login {
-    margin-right: -20px;
-  }
-
-  nav ul li {
-    float: right;
-    padding: 1rem;
-  }
-
-  nav li.optional {
-    display: none;
-  }
-
-  .finder {
-    height: 40vh;
-    padding: 1.5rem 2rem 0px;
-  }
-
-  h1 {
-    font-size: 2em;
-    margin-bottom: 1.5rem;
-  }
-
-  .form .input-form {
-    background-color: #ffffff40;
-    border: 0px;
-    color: #fff;
-    border-radius: 5px;
-  }
-
-  .content {
-    padding: 1.5rem 2rem 0px;
-  }
-
-  .popular {
-    display: grid;
-    grid-template-columns: 280px;
-    grid-template-rows: repeat(4, 340px);
-    grid-row-gap: 20px;
-    align-content: space-around;
-    justify-content: space-between;
-  }
-  
-  .testimony-card1 {
-    display: grid;
-    grid-template-columns: 380px;
-    grid-template-rows: repeat(2, 500px);
-  }
-
-  h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-
+@media (min-width: 576px) {
   .grid-footer {
-    grid-template-columns: auto;
+    grid-template-areas:
+      "a a a"
+      "b c d";
   }
 
-  .destinations,
-  .vehicles,
-  .interests {
-    display: none;
-  }
-}
-
-@media (min-width: 600px) and (max-width: 768px) {
-  nav {
-    padding: 5rem 6rem 0px;
-    width: 100vw;
-    height: 20vh;
+  .grid-footer .intro {
+    grid-area: a;
   }
 
-  nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    top: -50px;
+  .grid-footer .destinations {
+    grid-area: b;
   }
 
-  nav ul .logreg {
-    position: relative;
-    top: -8px;
-    color: #000;
+  .grid-footer .vehicles {
+    grid-area: c;
   }
 
-  .login {
-    margin-right: -20px;
-  }
-
-  nav ul li {
-    float: right;
-    padding: 1rem;
-  }
-
-  nav li.optional {
-    display: none;
-  }
-
-  .finder {
-    height: 80vh;
-    padding: 5rem 6rem 0px;
-  }
-
-  h1 {
-    font-size: 4em;
-    margin-bottom: 5rem;
-  }
-
-  .form {
-    display: grid;
-    grid-template-columns: 15rem 15rem;
-    grid-template-rows: 3rem 3rem 3rem;
-    grid-gap: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  .form .input-form {
-    background-color: #ffffff40;
-    border: 0px;
-    color: #fff;
-    border-radius: 5px;
-  }
-
-  .content {
-    padding: 5rem 6rem 0px;
-  }
-
-  .popular {
-    display: grid;
-    grid-template-columns: repeat(2, 280px);
-    grid-template-rows: repeat(2, 340px);
-    grid-row-gap: 20px;
-    align-content: space-around;
-    justify-content: space-between;
-  }
-  
-  .testimony-card1 {
-    display: grid;
-    grid-template-columns: 380px;
-    grid-template-rows: repeat(2, 500px);
-  }
-
-  h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-
-  .grid-footer {
-    grid-template-columns: auto auto;
+  .grid-footer .interests {
+    grid-area: d;
   }
 }
 
 @media (min-width: 768px) {
-  nav {
-    padding: 5rem 6rem 0px;
-    width: 100vw;
-    height: 20vh;
-  }
-
-  nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    top: -50px;
-  }
-
-  nav ul .logreg {
-    position: relative;
-    top: -8px;
-    color: #000;
-  }
-
-  .login {
-    margin-right: -20px;
-  }
-
-  nav ul li {
-    float: right;
-    padding: 1rem;
-  }
-
-  .finder {
-    height: 80vh;
-    padding: 5rem 6rem 0px;
-  }
-
-  h1 {
-    font-size: 4em;
-    margin-bottom: 5rem;
-  }
-
-  .form {
-    display: grid;
-    grid-template-columns: 15rem 15rem;
-    grid-template-rows: 3rem 3rem 3rem;
-    grid-gap: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  .form .input-form {
-    background-color: #ffffff40;
-    border: 0px;
-    color: #fff;
-    border-radius: 5px;
-  }
-
-  .content {
-    padding: 5rem 6rem 0px;
-  }
-
-  .popular {
-    display: grid;
-    grid-template-columns: 280px 280px 280px 280px;
-    grid-template-rows: 340px;
-    align-content: space-around;
-    justify-content: space-between;
-  }
-  
-  .testimony-card1 {
-    display: grid;
-    grid-template-columns: 500px 380px;
-    grid-template-rows: 500px;
-  }
-
-  h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-
   .grid-footer {
-    grid-template-columns: auto auto auto auto;
+    grid-template-areas:
+      "a b"
+      "c d";
+  }
+}
+
+@media (min-width: 992px) {
+  .hamburger {
+    display: none;
+  }
+
+  .nav-item {
+    display: initial;
   }
 }

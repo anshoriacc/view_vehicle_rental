@@ -35,30 +35,33 @@
         <a class="icon-home" href="home.html"
           ><i class="logo" alt="logo"></i>Home</a
         >
-        <ul>
-          <li>
-            <a href="/register.html"
-              ><button class="btn btn-warning logreg">Register</button></a
-            >
-          </li>
+        <ul class="nav-links">
+          <li><a class="active nav-item" href="home.html">Home</a></li>
+          <li><a class="nav-item" href="#news">Vehicle Type</a></li>
+          <li><a class="nav-item" href="#contact">History</a></li>
+          <li><a class="nav-item" href="#about">About</a></li>
+          <li><a class="hamburger" href="#">Hamburger</a></li>
           <li>
             <a href="/login.html"
-              ><button class="btn btn-outline-warning logreg login">
+              ><button class="btn btn-outline-warning button-logreg">
                 Login
               </button></a
             >
           </li>
-          <li class="optional"><a href="#about">About</a></li>
-          <li class="optional"><a href="#contact">History</a></li>
-          <li class="optional"><a href="#news">Vehicle Type</a></li>
-          <li><a class="active" href="home.html">Home</a></li>
+          <li>
+            <a href="/register.html"
+              ><button class="btn btn-warning button-logreg">
+                Register
+              </button></a
+            >
+          </li>
         </ul>
       </nav>
     </header>
-    <section class="finder">
+    <section class="finder-container">
       <h1>
-        Explore and <br />
-        Travel
+        <p style="margin: 0">Explore and</p>
+        <p style="margin: 0">Travel</p>
       </h1>
       <p>Vehicle Finder</p>
       <hr class="finder-line" />
@@ -148,7 +151,7 @@
           </p>
           <p class="mt-5">©2020 Vehicle Rental Center. All rights reserved</p>
         </div>
-        <div class="destinations mb-5">
+        <div class="destinations">
           <p class="footer-title">Destinations</p>
           <p><a href="#">Bali</a></p>
           <p><a href="#">Yogyakarta</a></p>
@@ -156,7 +159,7 @@
           <p><a href="#">Kalimantan</a></p>
           <p><a href="#">Malang</a></p>
         </div>
-        <div class="vehicles mb-5">
+        <div class="vehicles">
           <p class="footer-title">Vehicle</p>
           <p><a href="#">Bike</a></p>
           <p><a href="#">Cars</a></p>
@@ -164,7 +167,7 @@
           <p><a href="#">Return Times</a></p>
           <p><a href="#">FAQs</a></p>
         </div>
-        <div class="interests mb-5">
+        <div class="interests">
           <p class="footer-title">Interests</p>
           <p><a href="#">Adventure Travel</a></p>
           <p><a href="#">Art And Culture</a></p>
@@ -173,7 +176,7 @@
           <p><a href="#">Culinary Trip</a></p>
         </div>
       </section>
-      <span><hr class="line" /></span>
+      <hr class="line" />
       <section class="social">
         <a href="#twitter.com/"
           ><i class="icon icon-twitter" alt="twitter"></i>twitter</a
