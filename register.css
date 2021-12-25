@@ -4,94 +4,139 @@ body {
   margin: 0px;
   padding: 0px;
   overflow-x: hidden;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: 50vw 50vw;
-}
-
-.left {
-  background-image: url("./assets/van-forest.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: right;
-}
-
-header h1 {
-  font-family: "Playfair Display", sans-serif;
-  font-weight: 700;
-  font-size: 4rem;
-  margin-top: 4rem;
-  margin-left: 4rem;
-  margin-bottom: 4rem;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  margin: auto 10%;
   font-family: "Nunito", sans-serif;
 }
 
-.form button {
-  font-weight: 900;
-  border-radius: 10px;
-}
-
-.form input {
-  border-radius: 10px;
-}
-
-.form hr {
-  color: #4e4e4e;
-  overflow: visible;
-  text-align: center;
-  height: 1px;
-}
-
-.form hr:after {
-  background: #fff;
-  content: "or try another way";
-  color: #393939;
+h1 {
+  font-family: "Playfair Display", sans-serif;
   font-weight: 700;
-  padding: 5px;
-  position: relative;
-  top: -13px;
+  font-size: calc(2rem + 2vw);
 }
 
-.form-custom,
-.form-custom:focus {
-  font-weight: 400;
-  background-color: #dadada64;
-  border: 0px;
-  border-color: #dadada;
-  color: #393939;
-  display: block;
+p {
+  margin: 0;
 }
 
-.form-custom::placeholder {
-  color: #393939;
-  opacity: 0.5;
+/* main */
+.main {
+  height: 100vh;
+  background-image: linear-gradient(#00000066 100%, #fff 0%),
+    url("./assets/jeep-bromo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fff;
 }
 
-.width450 {
+.main a {
+  color: #fff;
+  /* text-decoration: none; */
+}
+
+.left-section,
+.right-section {
+  padding: 15%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-weight: 700;
+}
+
+.fixed-width {
   width: 100%;
-  height: 80px;
-  font-size: 1.5em;
+  height: 50px;
+  border-radius: 10px;
 }
 
-/* Footer */
+button.fixed-width {
+  width: 100%;
+  font-weight: 900;
+}
+
+.left-section {
+  padding-top: 5vmax;
+  margin: auto 0px;
+}
+
+.login1 {
+  display: none;
+}
+
+.right-section {
+  justify-content: center;
+}
+
+.custom-form,
+.custom-form:focus {
+  padding-left: 0.5rem;
+  background-color: #ffffff40;
+  border: 0px;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.custom-form::placeholder {
+  padding-left: 0.5rem;
+  color: #fff;
+}
+
+.icon-google {
+  content: url("./assets/icon-google.png");
+  height: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+button.icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* footer */
 footer {
+  padding: 2vmax 5vmax;
   background-color: #f9f9fb;
   color: #393939;
+  font-family: "Mulish", sans-serif;
+  font-weight: 300;
 }
 
 .grid-footer {
   display: grid;
-  padding: 70px 50px 0px;
-  font-family: "Mulish", sans-serif;
-  font-weight: 300;
+  grid-template-areas:
+    "a"
+    "b"
+    "c"
+    "d";
+  grid-gap: 1rem;
+}
+
+.grid-footer .intro {
+  grid-area: a;
+}
+
+.grid-footer .destinations {
+  grid-area: b;
+}
+
+.grid-footer .vehicles {
+  grid-area: c;
+}
+
+.grid-footer .interests {
+  grid-area: d;
+}
+
+.grid-footer .footer-title {
+  font-weight: 700;
+}
+
+.grid-footer p {
+  margin-bottom: 0.5rem;
+}
+
+.grid-footer a {
+  text-decoration: none;
   color: #393939;
 }
 
@@ -100,21 +145,16 @@ footer {
   opacity: 0.7;
 }
 
-.logo {
-  content: url("./assets/logo.svg");
-  height: 45px;
-}
-
 hr.line {
   color: #c4c4c4;
   width: 85%;
-  margin: 10px auto;
+  margin: 1rem auto;
 }
 
 .social {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  padding: 20px 0px 25px;
 }
 
 .social a {
@@ -122,13 +162,14 @@ hr.line {
   color: #393939;
 }
 
-.icon-google {
-  content: url("./assets/icon-google.png");
-  height: 1em;
+.icon {
+  height: 1.5rem;
+  margin: 1rem;
 }
 
-.icon {
-  margin: 15px;
+.logo {
+  content: url("./assets/logo.svg");
+  height: 45px;
 }
 
 .icon:hover {
@@ -149,54 +190,54 @@ hr.line {
 .icon-youtube {
   content: url("./assets/icon-youtube.svg");
 }
-/* Footer */
 
-@media (max-width: 600px) {
-  .grid {
-    grid-template-columns: 100vw;
-    background-image: linear-gradient(#00000040 100%, #fff 0%),
-      url("./assets/van-forest.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: right;
-    background-position-y: -400px;
-  }
-
-  header h1 {
-    color: #fff;
-  }
-
-  .form-custom,
-  .form-custom:focus {
-    font-weight: 400;
-    background-color: #ffffff40;
-    border: 0px;
-    color: #fff;
-    border-radius: 5px;
-    display: block;
-  }
-
-  .form-custom::placeholder {
-    color: #fff;
-  }
-}
-
-@media (min-width: 600px) and (max-width: 768px) {
-  .grid {
+@media (min-width: 576px) {
+  /* main */
+  .main {
+    display: grid;
     grid-template-columns: 50vw 50vw;
   }
 
-  .signup {
-    background-color: #fff;
+  .left-section {
+    border-right: 1px solid #fff;
+    height: 75vh;
+  }
+
+  .login1 {
+    display: initial;
+  }
+
+  .login2 {
+    display: none;
+  }
+
+  /* footer */
+  .grid-footer {
+    grid-template-areas:
+      "a a a"
+      "b c d";
+    justify-content: space-between;
   }
 }
 
 @media (min-width: 768px) {
-  .grid {
-    grid-template-columns: 50vw 50vw;
+  /* main */
+  .fixed-width {
+    font-size: 1.25rem;
   }
 
-  .signup {
-    background-color: #fff;
+  /* footer */
+  .grid-footer {
+    grid-template-areas:
+      "a b"
+      "c d";
+    justify-content: initial;
+  }
+}
+
+@media (min-width: 992px) {
+  /* footer */
+  .grid-footer {
+    grid-template-areas: "a b c d";
   }
 }

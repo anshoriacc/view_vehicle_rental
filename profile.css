@@ -7,37 +7,58 @@ body {
   font-family: "Nunito", sans-serif;
 }
 
-nav a {
-  text-decoration: none;
-  color: #b8becd;
+header,
+footer,
+.content {
+  width: 100%;
+  padding: 2vmax 5vmax;
 }
 
-nav a.icon-home {
-  font-size: 0px;
+p {
+  margin: 0;
 }
 
-nav a.icon-home:hover {
-  font-size: 0px;
+/* header */
+header {
+  background-color: #fff;
+}
+
+.hide-text {
+  font-size: 0;
+}
+
+.icon-home {
+  margin-bottom: auto;
+}
+
+.icon-home:hover {
   opacity: 0.7;
 }
 
-nav a:hover {
-  color: #000;
+.logo {
+  content: url("./assets/logo.svg");
+  height: 3rem;
 }
 
-nav a.active {
-  color: #000;
+.right {
+  display: flex;
+  gap: 0.5rem;
 }
 
-nav ul .email {
-  position: relative;
-  top: -5px;
+div.navbar-collapse {
+  flex-grow: initial;
 }
 
-.prof {
-  position: relative;
-  top: -10px;
-  margin-right: -20px;
+li.nav-item {
+  text-align: end;
+  margin: auto 0;
+}
+
+.button-email-profile {
+  padding-left: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .icon-email {
@@ -52,14 +73,19 @@ nav ul .email {
   border-radius: 50%;
 }
 
-h1 {
-  font-family: "Playfair Display", sans-serif;
+/* content */
+h1,
+h2 {
   font-weight: 700;
 }
 
-h2 {
+h1 {
   font-family: "Playfair Display", sans-serif;
-  font-weight: 400;
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
 }
 
 .profile-picture-container {
@@ -92,25 +118,22 @@ h2 {
 
 .info {
   font-weight: 700;
-  font-size: 1.5rem;
   color: #b8becd;
   margin-bottom: 0px;
 }
 
 .section-title {
   font-weight: 900;
-  font-size: 1.5rem;
 }
 
-.form-custom,
-.form-custom:focus {
+.custom-form,
+.custom-form:focus {
   width: 100%;
   border-top: none;
   border-left: none;
   border-right: none;
   display: block;
   font-weight: 400;
-  font-size: 1.5rem;
 }
 
 .form-check-input:checked {
@@ -120,7 +143,6 @@ h2 {
 
 label {
   font-weight: 400;
-  font-size: 1.5rem;
   color: #9f9f9f;
 }
 
@@ -133,33 +155,49 @@ label {
   width: 30%;
   height: 90px;
   font-weight: 700;
-  font-size: 1.5rem;
   border-radius: 10px;
 }
 
-.icon-like {
-  content: url("./assets/like.png");
-  height: 1.25rem;
-}
-
-/* Footer */
+/* footer */
 footer {
   background-color: #f9f9fb;
   color: #393939;
+  font-family: "Mulish", sans-serif;
+  font-weight: 300;
 }
 
 .grid-footer {
   display: grid;
-  padding: 70px 90px 0px;
-  font-family: "Mulish", sans-serif;
-  font-weight: 300;
-  color: #393939;
+  grid-template-areas:
+    "a"
+    "b"
+    "c"
+    "d";
+  grid-gap: 1rem;
+}
+
+.grid-footer .intro {
+  grid-area: a;
+}
+
+.grid-footer .destinations {
+  grid-area: b;
+}
+
+.grid-footer .vehicles {
+  grid-area: c;
+}
+
+.grid-footer .interests {
+  grid-area: d;
 }
 
 .grid-footer .footer-title {
   font-weight: 700;
-  color: #393939;
-  margin-bottom: 1em;
+}
+
+.grid-footer p {
+  margin-bottom: 0.5rem;
 }
 
 .grid-footer a {
@@ -172,21 +210,16 @@ footer {
   opacity: 0.7;
 }
 
-.logo {
-  content: url("./assets/logo.svg");
-  height: 45px;
-}
-
 hr.line {
   color: #c4c4c4;
   width: 85%;
-  margin: 10px auto;
+  margin: 1rem auto;
 }
 
 .social {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  padding: 20px 0px 25px;
 }
 
 .social a {
@@ -194,13 +227,9 @@ hr.line {
   color: #393939;
 }
 
-.icon-google {
-  content: url("./assets/icon-google.png");
-  height: 1em;
-}
-
 .icon {
-  margin: 15px;
+  height: 1.5rem;
+  margin: 1rem;
 }
 
 .icon:hover {
@@ -221,139 +250,76 @@ hr.line {
 .icon-youtube {
   content: url("./assets/icon-youtube.svg");
 }
-/* Footer */
 
-@media (max-width: 600px) {
-  nav {
-    padding: 1.5rem 2rem 0px;
-    width: 100vw;
-    height: 10vh;
+@media (min-width: 576px) {
+  /* header */
+  .navbar-nav {
+    flex-direction: row-reverse !important;
   }
 
-  nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    top: -50px;
+  .nav-menu {
+    display: flex;
   }
 
-  nav ul li {
-    float: right;
-    padding: 1rem;
+  .expanded-right {
+    display: flex !important;
+    flex-direction: row-reverse;
   }
 
-  nav li.optional {
-    display: none;
-  }
-
-  .content {
-    padding: 1.5rem 2rem;
-  }
-
-  h1 {
-    font-size: 2em;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
+  /* footer */
   .grid-footer {
-    grid-template-columns: auto;
-  }
-
-  .destinations,
-  .vehicles,
-  .interests {
-    display: none;
-  }
-}
-
-@media (min-width: 600px) and (max-width: 768px) {
-  nav {
-    padding: 5rem 6rem 0px;
-    width: 100vw;
-    height: 20vh;
-  }
-
-  nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    top: -50px;
-  }
-
-  nav ul li {
-    float: right;
-    padding: 1rem;
-  }
-
-  nav li.optional {
-    display: none;
-  }
-
-  .page {
-    font-weight: 700;
-    font-size: 2.25rem;
-  }
-
-  .content {
-    padding: 5rem 6rem;
-  }
-
-  h1 {
-    font-size: 4em;
-  }
-
-  h2 {
-    font-size: 2.5rem;
-  }
-
-  .grid-footer {
-    grid-template-columns: auto auto;
+    grid-template-areas:
+      "a a a"
+      "b c d";
+    justify-content: space-between;
   }
 }
 
 @media (min-width: 768px) {
-  nav {
-    padding: 5rem 6rem 0px;
-    width: 100vw;
-    height: 20vh;
-  }
-
-  nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    top: -50px;
-  }
-
-  nav ul li {
-    float: right;
-    padding: 1rem;
-  }
-
-  .page {
-    font-weight: 700;
-    font-size: 2.25rem;
-  }
-
-  .content {
-    padding: 5rem 6rem;
-  }
-
+  /* content */
   h1 {
-    font-size: 4em;
+    font-size: 3.5rem;
+    margin-bottom: 3.5rem;
   }
 
   h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    margin-bottom: 2rem;
   }
 
+  .info {
+    font-size: 1.25rem;
+  }
+
+  .section-title {
+    font-size: 1.25rem;
+  }
+
+  .custom-form,
+  .custom-form:focus {
+    font-size: 1.25rem;
+  }
+
+  label {
+    font-size: 1.25rem;
+  }
+
+  .action-button {
+    font-size: 1.25rem;
+  }
+
+  /* footer */
   .grid-footer {
-    grid-template-columns: auto auto auto auto;
+    grid-template-areas:
+      "a b"
+      "c d";
+    justify-content: initial;
+  }
+}
+
+@media (min-width: 992px) {
+  /* footer */
+  .grid-footer {
+    grid-template-areas: "a b c d";
   }
 }

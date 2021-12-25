@@ -33,43 +33,51 @@
     <title>Login | Vehicle Rental</title>
   </head>
   <body>
-    <section class="grid-main">
-      <section class="header">
+    <section class="main">
+      <section class="left-section">
         <header>
           <h1>
-            Let's Explore <br />
-            The World
+            <p>Let's Explore</p>
+            <p>The World</p>
           </h1>
         </header>
-        <p class="signup">Don't have account?</p>
-        <a href="/register.html"
-          ><button class="btn bg-dark text-warning width450 signup">
+        <p class="register1">Don't have an account?</p>
+        <a style="text-decoration: none" href="/register.html"
+          ><button
+            style="max-width: 375px"
+            class="btn bg-dark text-warning fixed-width register1"
+          >
             Register
           </button></a
         >
       </section>
-      <section class="form">
+      <section class="right-section">
         <input
           type="email"
-          class="mb-3 form-custom width450"
+          class="custom-form fixed-width"
           placeholder="Email"
           name="email"
           id="email"
         />
         <input
           type="password"
-          class="mb-1 form-custom width450"
+          class="custom-form fixed-width"
           placeholder="Password"
           name="Password"
           id="Password"
         />
-        <a class="" href="#">Forgot password?</a><br />
+        <a style="font-family: 'Mulish', sans-serif" href="#"
+          >Forgot password?</a
+        >
         <a href="/home.html"
-          ><button class="btn btn-warning mt-4 mb-3 width450">Login</button></a
-        ><br />
-        <button class="btn bg-light width450 icon-button">
+          ><button class="btn btn-warning fixed-width">Login</button></a
+        >
+        <button class="btn bg-light fixed-width icon-button">
           <i class="icon-google"></i>Login with Google
         </button>
+        <p class="register2 text-center">
+          Don't have account? <a href="register.html">Register</a> now
+        </p>
       </section>
     </section>
     <footer>
@@ -83,7 +91,7 @@
           </p>
           <p class="mt-5">©2020 Vehicle Rental Center. All rights reserved</p>
         </div>
-        <div class="destinations mb-5">
+        <div class="destinations">
           <p class="footer-title">Destinations</p>
           <p><a href="#">Bali</a></p>
           <p><a href="#">Yogyakarta</a></p>
@@ -91,7 +99,7 @@
           <p><a href="#">Kalimantan</a></p>
           <p><a href="#">Malang</a></p>
         </div>
-        <div class="vehicles mb-5">
+        <div class="vehicles">
           <p class="footer-title">Vehicle</p>
           <p><a href="#">Bike</a></p>
           <p><a href="#">Cars</a></p>
@@ -99,7 +107,7 @@
           <p><a href="#">Return Times</a></p>
           <p><a href="#">FAQs</a></p>
         </div>
-        <div class="interests mb-5">
+        <div class="interests">
           <p class="footer-title">Interests</p>
           <p><a href="#">Adventure Travel</a></p>
           <p><a href="#">Art And Culture</a></p>
@@ -108,7 +116,7 @@
           <p><a href="#">Culinary Trip</a></p>
         </div>
       </section>
-      <span><hr class="line" /></span>
+      <hr class="line" />
       <section class="social">
         <a href="#twitter.com/"
           ><i class="icon icon-twitter" alt="twitter"></i>twitter</a
