@@ -31,36 +31,150 @@
   </head>
   <body>
     <header>
-      <nav>
+      <nav class="navbar navbar-expand-sm navbar-light p-0">
+        <div class="container-fluid p-0">
+          <a class="icon-home" href="home.html"
+            ><i class="logo" alt="logo"></i
+          ></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <ul class="button-login-register">
+                <!-- <li class="nav-item nav-link"> -->
+                  <a href="/login.html"
+                    ><button class="btn btn-outline-warning">
+                      Login
+                    </button></a
+                  >
+                  <a href="/register.html"
+                    ><button class="btn btn-warning">
+                      Register
+                    </button></a
+                  >
+                <!-- </li> -->
+              </ul>
+              <span class="nav-menu p-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Vehicle Type</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">History</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+                </li>
+              </span>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- <nav class="navbar navbar-expand-md navbar-light">
         <a class="icon-home" href="home.html"
           ><i class="logo" alt="logo"></i>Home</a
         >
-        <ul class="nav-links">
-          <li><a class="active nav-item" href="home.html">Home</a></li>
-          <li><a class="nav-item" href="#news">Vehicle Type</a></li>
-          <li><a class="nav-item" href="#contact">History</a></li>
-          <li><a class="nav-item" href="#about">About</a></li>
-          <li>
-            <a class="hamburger" href="#"
-              ><button class="btn btn-outline-light button-logreg">☰</button></a
-            >
-          </li>
-          <li>
-            <a style="padding: 0 1rem" href="/login.html"
-              ><button class="btn btn-outline-warning button-logreg">
-                Login
-              </button></a
-            >
-          </li>
-          <li>
-            <a href="/register.html"
-              ><button class="btn btn-warning button-logreg">
-                Register
-              </button></a
-            >
-          </li>
-        </ul>
-      </nav>
+        <section class="nav-right">
+          <ul class="nav-button">
+            <li>
+              <a href="/register.html"
+                ><button class="btn btn-warning button-logreg">
+                  Register
+                </button></a
+              >
+            </li>
+            <li>
+              <a style="padding: 0 1rem" href="/login.html"
+                ><button class="btn btn-outline-warning button-logreg">
+                  Login
+                </button></a
+              >
+            </li>
+          </ul>
+          <ul class="nav-links">
+            <li>
+              <button
+                class="navbar-toggler button-logreg"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                ☰
+              </button>
+            </li>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Dropdown
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link disabled"
+                    href="#"
+                    tabindex="-1"
+                    aria-disabled="true"
+                    >Disabled</a
+                  >
+                </li>
+              </ul>
+              <form class="d-flex">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button class="btn btn-outline-success" type="submit">
+                  Search
+                </button>
+              </form>
+            </div>
+          </ul>
+        </section>
+      </nav> -->
     </header>
     <section class="finder-container">
       <section class="finder-content">
@@ -91,57 +205,63 @@
             <option value="cash">Cash</option>
           </select>
           <input class="input-form" type="date" id="date" name="date" />
-          <button class="btn btn-warning explore">Explore</button>
+          <button class="btn btn-warning button-explore">Explore</button>
         </section>
       </section>
     </section>
     <section class="content">
-      <h2>Popular in town</h2>
-      <section class="popular mb-5">
+      <section class="popular-title">
+        <h2>Popular in town</h2>
+        <a href="#">View all ></a>
+      </section>
+      <section class="popular">
         <div class="popular-card1">
-          <div class="popular-card-text">
-            <p class="popular-card-title mb-0">Merapi</p>
-            <p class="popular-card-location mb-0">Yogyakarta</p>
+          <div class="pc-text">
+            <p class="pc-title">Merapi</p>
+            <p class="pc-location">Yogyakarta</p>
           </div>
         </div>
         <div class="popular-card2">
-          <div class="popular-card-text">
-            <p class="popular-card-title mb-0">Teluk Bogam</p>
-            <p class="popular-card-location mb-0">Kalimantan</p>
+          <div class="pc-text">
+            <p class="pc-title">Teluk Bogam</p>
+            <p class="pc-location">Kalimantan</p>
           </div>
         </div>
         <div class="popular-card3">
-          <div class="popular-card-text">
-            <p class="popular-card-title mb-0">Bromo</p>
-            <p class="popular-card-location mb-0">Malang</p>
+          <div class="pc-text">
+            <p class="pc-title">Bromo</p>
+            <p class="pc-location">Malang</p>
           </div>
         </div>
         <div class="popular-card4">
-          <div class="popular-card-text">
-            <p class="popular-card-title mb-0">Malioboro</p>
-            <p class="popular-card-location mb-0">Yogyakarta</p>
+          <div class="pc-text">
+            <p class="pc-title">Malioboro</p>
+            <p class="pc-location">Yogyakarta</p>
           </div>
         </div>
       </section>
       <h2>Testimonials</h2>
-      <section class="testimony mb-5">
-        <div class="testimony-card1">
-          <div class="testimony-detail">
-            <p><img src="./assets/stars.png" style="width: 200px" alt="" /></p>
-            <p class="testimony-comment">
-              ”It was the right decision to rent vehicle<br />
-              here, I spent less money and enjoy the<br />
-              trip. It was an amazing experience to<br />
-              have a ride for wildlife trip!”
-            </p>
-            <p class="testimony-user mb-0">Edward Newgate</p>
-            <p class="testimony-user-job mb-0">Founder Circle</p>
-          </div>
+      <section class="testimony">
+        <div class="testimony-card">
           <div class="testimony-photo">
-            <p class="testimony-button pt-1 mb-0 text-center">
+            <div class="testimony-button text-center">
               <a href="#testimony-previous"><i class="icon-previous"></i></a>
               <a href="#testimony-next"><i class="icon-next"></i></a>
+            </div>
+          </div>
+          <div class="testimony-detail">
+            <p>
+              <img src="./assets/stars.png" style="height: 1.5rem" alt="" />
             </p>
+            <p class="testimony-comment">
+              ”It was the right decision to rent vehicle here, I spent less
+              money and enjoy the trip. It was an amazing experience to have a
+              ride for wildlife trip!”
+            </p>
+            <div>
+              <p class="testimony-user">Edward Newgate</p>
+              <p class="testimony-user-job">Founder Circle</p>
+            </div>
           </div>
         </div>
       </section>
@@ -201,5 +321,11 @@
         >
       </section>
     </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

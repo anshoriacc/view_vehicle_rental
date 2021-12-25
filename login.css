@@ -82,6 +82,18 @@ input {
   font-size: 1.5em;
 }
 
+.icon-google {
+  content: url("./assets/icon-google.png");
+  height: 2rem;
+  margin-right: 0.5rem;
+}
+
+button.icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Footer */
 footer {
   background-color: #f9f9fb;
@@ -132,11 +144,6 @@ hr.line {
 .social a {
   font-size: 0px;
   color: #393939;
-}
-
-.icon-google {
-  content: url("./assets/icon-google.png");
-  height: 1em;
 }
 
 .icon {
