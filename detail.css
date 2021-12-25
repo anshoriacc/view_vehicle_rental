@@ -272,14 +272,6 @@ hr.line {
 
 @media (min-width: 576px) {
   /* header */
-  .navbar-nav {
-    flex-direction: row-reverse !important;
-  }
-
-  .nav-menu {
-    display: flex;
-  }
-
   .expanded-right {
     display: flex !important;
     flex-direction: row-reverse;
