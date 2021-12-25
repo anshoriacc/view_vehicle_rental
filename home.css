@@ -193,40 +193,28 @@ hr.finder-line {
   font-weight: 600;
 }
 
-/* testimony */
+.testimony {
+  background-color: #f9f9fb;
+  border-radius: 25px;
+}
+
+div.carousel-inner {
+  height: 100%;
+}
+
 .testimony-card {
-  margin: 0 auto;
-  display: grid;
+  display: grid !important;
   grid-template-columns: auto;
-  grid-template-rows: calc(calc(4 / 3) * calc(100vw - 10vmax));
+  grid-template-rows: calc(calc(4 / 3) * calc(100vw - 12vmax)) auto;
   grid-gap: 2vmax;
+  padding: 2vmax;
 }
 
-.testimony-photo {
-  background-image: url("./assets/josh.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  position: relative;
+.testimony-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 15px;
-}
-
-.testimony-button {
-  padding-top: 0.25rem;
-  width: 100px;
-  height: 50px;
-  background-color: #fff;
-  border-radius: 5px 0px 15px 0px;
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
-}
-
-.icon-previous {
-  content: url("./assets/previous.png");
-}
-.icon-next {
-  content: url("./assets/next.png");
 }
 
 .testimony-detail {
@@ -237,12 +225,10 @@ hr.finder-line {
 
 .testimony-comment {
   font-family: "Mulish", sans-serif;
-  font-size: 1.5rem;
 }
 
 .testimony-user {
   font-weight: 700;
-  font-size: 1.5rem;
 }
 
 /* footer */
@@ -304,7 +290,6 @@ hr.line {
 }
 
 .social {
-  /* padding: 1.5rem; */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -378,11 +363,27 @@ hr.line {
     width: 100%;
   }
 
+  .testimony-card {
+    grid-template-areas: "a b";
+    grid-template-columns: repeat(2, calc((100vw - 16vmax) / 2));
+    grid-template-rows: calc(calc(4 / 3) * calc((100vw - 16vmax) / 2));
+  }
+
+  .testimony-photo {
+    grid-area: b;
+  }
+
+  .testimony-detail {
+    justify-content: center;
+    grid-area: a;
+  }
+
   /* footer */
   .grid-footer {
     grid-template-areas:
       "a a a"
       "b c d";
+    justify-content: space-between;
   }
 }
 
@@ -406,15 +407,31 @@ hr.line {
     grid-gap: 2vmax;
   }
 
+  .testimony-comment,
+  .testimony-user {
+    font-size: 1.5rem;
+  }
+
   /* footer */
   .grid-footer {
     grid-template-areas:
       "a b"
       "c d";
+    justify-content: initial;
   }
 }
 
 @media (min-width: 992px) {
+  .testimony-card {
+    grid-template-areas: "a b";
+    grid-template-columns: repeat(2, calc((100vw - 36vmax) / 2));
+    grid-template-rows: calc(calc(4 / 3) * calc((100vw - 36vmax) / 2));
+  }
+
+  .testimony-container {
+    margin: 0 10vmax;
+  }
+
   /* footer */
   .grid-footer {
     grid-template-areas: "a b c d";

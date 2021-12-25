@@ -51,16 +51,12 @@
             <ul class="navbar-nav">
               <ul class="button-login-register">
                 <!-- <li class="nav-item nav-link"> -->
-                  <a href="/login.html"
-                    ><button class="btn btn-outline-warning">
-                      Login
-                    </button></a
-                  >
-                  <a href="/register.html"
-                    ><button class="btn btn-warning">
-                      Register
-                    </button></a
-                  >
+                <a href="/login.html"
+                  ><button class="btn btn-outline-warning">Login</button></a
+                >
+                <a href="/register.html"
+                  ><button class="btn btn-warning">Register</button></a
+                >
                 <!-- </li> -->
               </ul>
               <span class="nav-menu p-0">
@@ -83,98 +79,6 @@
           </div>
         </div>
       </nav>
-      <!-- <nav class="navbar navbar-expand-md navbar-light">
-        <a class="icon-home" href="home.html"
-          ><i class="logo" alt="logo"></i>Home</a
-        >
-        <section class="nav-right">
-          <ul class="nav-button">
-            <li>
-              <a href="/register.html"
-                ><button class="btn btn-warning button-logreg">
-                  Register
-                </button></a
-              >
-            </li>
-            <li>
-              <a style="padding: 0 1rem" href="/login.html"
-                ><button class="btn btn-outline-warning button-logreg">
-                  Login
-                </button></a
-              >
-            </li>
-          </ul>
-          <ul class="nav-links">
-            <li>
-              <button
-                class="navbar-toggler button-logreg"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                ☰
-              </button>
-            </li>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#"
-                    >Home</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    href="#"
-                    id="navbarDropdown"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Dropdown
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li>
-                      <a class="dropdown-item" href="#">Another action</a>
-                    </li>
-                    <li><hr class="dropdown-divider" /></li>
-                    <li>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link disabled"
-                    href="#"
-                    tabindex="-1"
-                    aria-disabled="true"
-                    >Disabled</a
-                  >
-                </li>
-              </ul>
-              <form class="d-flex">
-                <input
-                  class="form-control me-2"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-                <button class="btn btn-outline-success" type="submit">
-                  Search
-                </button>
-              </form>
-            </div>
-          </ul>
-        </section>
-      </nav> -->
     </header>
     <section class="finder-container">
       <section class="finder-content">
@@ -241,28 +145,83 @@
         </div>
       </section>
       <h2>Testimonials</h2>
-      <section class="testimony">
-        <div class="testimony-card">
-          <div class="testimony-photo">
-            <div class="testimony-button text-center">
-              <a href="#testimony-previous"><i class="icon-previous"></i></a>
-              <a href="#testimony-next"><i class="icon-next"></i></a>
+      <section class="testimony-container">
+        <div
+          id="carouselExampleFade"
+          class="carousel slide carousel-fade testimony bg-light"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item testimony-card active">
+              <div class="testimony-photo">
+                <img src="./assets/edward.jpg" class="" alt="edward" />
+              </div>
+              <div class="testimony-detail">
+                <p>
+                  <img src="./assets/stars.png" style="height: 1.5rem" alt="" />
+                </p>
+                <p class="testimony-comment">
+                  ”It was the right decision to rent vehicle here, I spent less
+                  money and enjoy the trip. It was an amazing experience to have
+                  a ride for wildlife trip!”
+                </p>
+                <div>
+                  <p class="testimony-user">Edward Newgate</p>
+                  <p class="testimony-user-job">Founder Circle</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item testimony-card">
+              <div class="testimony-photo">
+                <img src="./assets/samantha.jpg" class="" alt="edward" />
+              </div>
+              <div class="testimony-detail">
+                <p>
+                  <img src="./assets/stars.png" style="height: 1.5rem" alt="" />
+                </p>
+                <p class="testimony-comment">”Best place to rent vehicles!”</p>
+                <div>
+                  <p class="testimony-user">Samantha Doe</p>
+                  <p class="testimony-user-job">CEO Lupabapak</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item testimony-card">
+              <div class="testimony-photo">
+                <img src="./assets/martin.jpg" class="" alt="edward" />
+              </div>
+              <div class="testimony-detail">
+                <p>
+                  <img src="./assets/stars.png" style="height: 1.5rem" alt="" />
+                </p>
+                <p class="testimony-comment">
+                  ”Top, top, top vehicle-rental web. Very enjoyable to use.”
+                </p>
+                <div>
+                  <p class="testimony-user">Martin Flick</p>
+                  <p class="testimony-user-job">CTO Googol</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="testimony-detail">
-            <p>
-              <img src="./assets/stars.png" style="height: 1.5rem" alt="" />
-            </p>
-            <p class="testimony-comment">
-              ”It was the right decision to rent vehicle here, I spent less
-              money and enjoy the trip. It was an amazing experience to have a
-              ride for wildlife trip!”
-            </p>
-            <div>
-              <p class="testimony-user">Edward Newgate</p>
-              <p class="testimony-user-job">Founder Circle</p>
-            </div>
-          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleFade"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleFade"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
       </section>
     </section>
