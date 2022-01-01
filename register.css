@@ -127,6 +127,10 @@ footer {
   grid-area: d;
 }
 
+br.break {
+  display: none;
+}
+
 .grid-footer .footer-title {
   font-weight: 700;
 }
@@ -227,17 +231,16 @@ hr.line {
   }
 
   /* footer */
-  .grid-footer {
-    grid-template-areas:
-      "a b"
-      "c d";
-    justify-content: initial;
-  }
 }
 
 @media (min-width: 992px) {
   /* footer */
   .grid-footer {
     grid-template-areas: "a b c d";
+    justify-content: initial;
+  }
+
+  br.break {
+    display: initial;
   }
 }
